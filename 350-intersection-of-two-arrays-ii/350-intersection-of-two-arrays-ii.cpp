@@ -18,7 +18,7 @@ public:
         vector<int>ans;
         for(int i=0;i<freq1.size();i++){
             int count = std::min(freq1[i], freq2[i]);
-            while(count-->0){
+            while(count-- > 0){
                 ans.push_back(i);
             }
         }
