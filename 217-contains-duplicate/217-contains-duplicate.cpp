@@ -1,17 +1,18 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_map<int,int> numCount;
+       if(nums.size() == 1) return false;
+        set<int>numSet;
+        
         for(int num : nums)
         {
-            auto itr = numCount.find(num);
-            if( itr != numCount.end())
+            if( numSet.find(num) != numSet.end())
             {
                 return true;
             }
             else
             {
-                numCount.insert(pair<int,int>(num,1));
+                numSet.insert(num);
             }
         }
         return false;
