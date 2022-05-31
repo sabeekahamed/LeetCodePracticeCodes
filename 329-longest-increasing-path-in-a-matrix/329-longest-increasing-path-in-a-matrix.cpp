@@ -41,7 +41,8 @@ public:
         {
             for(int j=0;j<colSize;j++)
             {
-                longestPathSize = std::max(longestPathSize,TraverseAndGetMax(matrix,lip,i,j,rowSize,colSize));   
+                if(lip[i][j] == 0)
+                    longestPathSize = std::max(longestPathSize,TraverseAndGetMax(matrix,lip,i,j,rowSize,colSize));   
             }
         }
         return longestPathSize;
