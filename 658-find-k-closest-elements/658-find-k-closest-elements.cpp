@@ -15,8 +15,8 @@ public:
                 right = mid;
             }
         }
-        vector<int>toRet(arr.begin()+left,arr.begin()+right+k);
-        return toRet;
+       
+        return  vector<int>(arr.begin()+left,arr.begin()+right+k);
         
     }
 };
