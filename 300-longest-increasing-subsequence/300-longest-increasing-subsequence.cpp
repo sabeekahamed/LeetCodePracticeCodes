@@ -1,7 +1,6 @@
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
-        if(nums.size() == 0) return 0;
         vector<int>lis(nums.size(),1);
         int maxLen = 1;
         for(int i=1;i<nums.size();i++)
